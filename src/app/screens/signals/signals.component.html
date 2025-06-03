@@ -1,0 +1,17 @@
+<div class="px-5">
+    @if(isCalculating()) {
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    } @else {
+    <div></div>
+    <h1>Valor: {{counter()}}</h1>
+
+    @if(isFive()) {
+    <h2>El contador alcanzó 5!!!</h2>
+    }
+
+    <button class="btn btn-primary" (click)="increment()">+</button>
+    <button class="btn btn-danger" (click)="decrement()">-</button>
+    }
+</div>
