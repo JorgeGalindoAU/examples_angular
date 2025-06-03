@@ -2,10 +2,11 @@ import { CommonModule, CurrencyPipe, DatePipe } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Product } from '../../../interfaces/product.interface';
+import { GoBackButtonComponent } from "../../../components/go-back-button/go-back-button.component";
 
 @Component({
   selector: 'app-ng-model',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, GoBackButtonComponent],
   templateUrl: './ng-model.component.html',
   styleUrl: './ng-model.component.css'
 })
@@ -21,5 +22,4 @@ export class NgModelComponent {
     console.log('Producto creado:', this.product);
     // maybe we can call an API here using the product that just have been created via form
   }
-
 }

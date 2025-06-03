@@ -1,8 +1,9 @@
 import { Component, computed, signal } from '@angular/core';
+import { GoBackButtonComponent } from "../../../components/go-back-button/go-back-button.component";
 
 @Component({
   selector: 'app-signals',
-  imports: [],
+  imports: [GoBackButtonComponent],
   templateUrl: './signals.component.html',
   styleUrl: './signals.component.css',
   standalone: true,

@@ -1,10 +1,11 @@
 import { CurrencyPipe, DatePipe } from '@angular/common';
 import { Component, computed, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { GoBackButtonComponent } from "../../../components/go-back-button/go-back-button.component";
 
 @Component({
   selector: 'app-signals-advanced',
-  imports: [FormsModule, CurrencyPipe, DatePipe],
+  imports: [FormsModule, CurrencyPipe, DatePipe, GoBackButtonComponent],
   templateUrl: './signals-advanced.component.html',
   styleUrl: './signals-advanced.component.css'
 })
