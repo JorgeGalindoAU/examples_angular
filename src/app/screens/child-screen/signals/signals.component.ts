@@ -19,10 +19,10 @@ export class SignalsComponent {
   }
 
   increment() {
-    this.isCalculating.set(true);
+    this.isCalculating.set(true); // set is used to create a new state
 
     setTimeout(() => {
-      this.counter.update(v => ++v);
+      this.counter.update(v => ++v); // update is used to update current state
       this.isCalculating.set(false);
     }, 1000);
   }

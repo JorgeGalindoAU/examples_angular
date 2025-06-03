@@ -19,6 +19,16 @@ export class SignalsAdvancedComponent {
 
   filteredProducts = computed(() => {
     const searchTerm = this.filter().toLowerCase();
+
     return this.products().filter(p => p.name.toLowerCase().includes(searchTerm));
   });
+
+  updateFilter(event: Event) {
+    console.log(event);
+
+    const input: HTMLInputElement = event.target as HTMLInputElement;
+    const newValue = input.value;
+
+    this.filter.set(newValue);
+  }
 }
