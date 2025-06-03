@@ -8,7 +8,8 @@ import { GoBackButtonComponent } from "../../../components/go-back-button/go-bac
   selector: 'app-ng-model',
   imports: [CommonModule, FormsModule, GoBackButtonComponent],
   templateUrl: './ng-model.component.html',
-  styleUrl: './ng-model.component.css'
+  styleUrl: './ng-model.component.css',
+  standalone: true,
 })
 export class NgModelComponent {
   product: Product = {
