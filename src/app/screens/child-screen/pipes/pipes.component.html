@@ -15,7 +15,7 @@
         <tbody>
             @for (p of products; track $index) {
             <tr>
-                <td>{{ p.name }}</td>
+                <td>{{ p.name | titlecase}}</td>
                 <td>{{ p.price | currency:'EUR' }}</td>
                 <td>{{ p.createdAt | date:'longDate' }}</td>
                 <td>{{ p.quantity}} uds.</td>

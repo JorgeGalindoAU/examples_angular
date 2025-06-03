@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { Product } from '../../../interfaces/product.interface';
-import { CurrencyPipe, DatePipe } from '@angular/common';
+import { CurrencyPipe, DatePipe, TitleCasePipe } from '@angular/common';
 import { GoBackButtonComponent } from "../../../components/go-back-button/go-back-button.component";
 
 @Component({
   selector: 'app-pipes',
-  imports: [CurrencyPipe, DatePipe, GoBackButtonComponent],
+  imports: [CurrencyPipe, TitleCasePipe, DatePipe, GoBackButtonComponent],
   templateUrl: './pipes.component.html',
   styleUrl: './pipes.component.css',
   standalone: true,
@@ -18,4 +18,6 @@ export class PipesComponent {
     { name: 'Monitor', price: 199.99, createdAt: new Date(2024, 3, 10), quantity: 7 },
     { name: 'Teclado', price: 49.99, createdAt: new Date(2024, 2, 5), quantity: 50 }
   ];
+
+  // https://angular.dev/guide/templates/pipes
 }

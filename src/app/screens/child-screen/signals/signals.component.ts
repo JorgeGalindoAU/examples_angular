@@ -1,4 +1,4 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, Signal, signal, WritableSignal } from '@angular/core';
 import { GoBackButtonComponent } from "../../../components/go-back-button/go-back-button.component";
 
 @Component({
@@ -9,9 +9,9 @@ import { GoBackButtonComponent } from "../../../components/go-back-button/go-bac
   standalone: true,
 })
 export class SignalsComponent {
-  counter = signal<number>(0);
-  isCalculating = signal<boolean>(false);
-  isFive = computed<boolean>(() => {
+  counter: WritableSignal<number> = signal<number>(0);
+  isCalculating: WritableSignal<boolean> = signal<boolean>(false);
+  isFive: Signal<boolean> = computed<boolean>(() => {
     return this.counter() == 5;
   });
 
