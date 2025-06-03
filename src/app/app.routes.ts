@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { MainScreenComponent } from './screens/main-screen/main-screen.component';
-import { PipesComponent } from './screens/pipes/pipes.component';
-import { SignalsComponent } from './screens/signals/signals.component';
+import { SignalsComponent } from './screens/child-screen/signals/signals.component';
+import { PipesComponent } from './screens/child-screen/pipes/pipes.component';
 
 const title: string = 'Mi app de prueba';
 
