@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { IProduct } from '../../../interfaces/product.interface';
-import { CurrencyPipe, DatePipe, TitleCasePipe } from '@angular/common';
+import { CurrencyPipe, DatePipe, SlicePipe, UpperCasePipe } from '@angular/common';
 import { GoBackButtonComponent } from "../../../components/go-back-button/go-back-button.component";
 
 @Component({
   selector: 'app-pipes',
-  imports: [CurrencyPipe, TitleCasePipe, DatePipe, GoBackButtonComponent],
+  imports: [CurrencyPipe, UpperCasePipe, DatePipe, SlicePipe, GoBackButtonComponent],
   templateUrl: './pipes.component.html',
   styleUrl: './pipes.component.css',
   standalone: true,

@@ -15,12 +15,14 @@
         <tbody>
             @for (p of products; track $index) {
             <tr>
-                <td>{{ p.name | titlecase}}</td>
+                <td>{{ p.name | uppercase}}</td>
                 <td>{{ p.price | currency:'EUR' }}</td>
-                <td>{{ p.createdAt | date:'longDate' }}</td>
+                <td>{{ p.createdAt | date:'longDate' }} ({{ p.createdAt | date:'short' }})</td>
                 <td>{{ p.quantity}} uds.</td>
             </tr>
             }
+            <br>
+            <p>{{ 'Este texto es muy largo y debe ser truncado' | slice:0:20 }}...</p>
         </tbody>
     </table>
 </div>

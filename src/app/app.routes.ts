@@ -7,6 +7,7 @@ import { ObservableAdvancedComponent } from './screens/elements-screens/observab
 import { NgModelComponent } from './screens/elements-screens/ng-model/ng-model.component';
 import { PipesComponent } from './screens/elements-screens/pipes/pipes.component';
 import { SimpleComponentComponent } from './screens/elements-screens/simple-component/simple-component.component';
+import { NgClassComponent } from './screens/elements-screens/ng-class/ng-class.component';
 
 const title: string = 'Mi app de prueba';
 
@@ -18,6 +19,7 @@ export const routes: Routes = [
     { path: 'advanced_signals', component: SignalsAdvancedComponent, title: title },
     { path: 'observables', component: ObservableComponent, title: title },
     { path: 'advanced_observables', component: ObservableAdvancedComponent, title: title },
+    { path: 'ng_class', component: NgClassComponent, title: title },
     { path: 'ng_model', component: NgModelComponent, title: title },
     { path: 'pipes', component: PipesComponent, title: title },
 ];

@@ -1,0 +1,30 @@
+<div class="container mt-4">
+    <app-go-back-button></app-go-back-button>
+
+    <h2 class="mb-4 text-primary">Listado de Productos</h2>
+
+    <table class="table table-bordered table-striped">
+        <thead class="table-light">
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Fecha de creación</th>
+                <th>Cantidad</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of products()">
+                <td>{{ p.name | uppercase }}</td>
+                <td>{{ p.price | currency: 'EUR' }}</td>
+                <td>{{ p.createdAt | date: 'longDate' }}</td>
+                <td>{{ p.quantity }}</td>
+                <td>
+                    <span class="badge" [ngClass]="p.quantity > 0 ? 'bg-success' : 'bg-danger'">
+                        {{ p.quantity > 0 ? 'Disponible' : 'Sin stock' }}
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
