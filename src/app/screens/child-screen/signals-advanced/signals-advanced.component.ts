@@ -1,5 +1,5 @@
 import { CurrencyPipe, DatePipe } from '@angular/common';
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, signal, effect, EffectRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { GoBackButtonComponent } from "../../../components/go-back-button/go-back-button.component";
 
@@ -23,6 +23,16 @@ export class SignalsAdvancedComponent {
 
     return this.products().filter(p => p.name.toLowerCase().includes(searchTerm));
   });
+
+  constructor() {
+    effect(() => {
+      console.log(`Filter is: ${this.filter()}`);
+
+      if (this.filter() === 'KO') {
+        alert('KO received!');
+      }
+    });
+  }
 
   updateFilter(event: Event) {
     console.log(event);
