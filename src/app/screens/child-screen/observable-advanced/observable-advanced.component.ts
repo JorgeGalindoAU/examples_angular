@@ -3,16 +3,19 @@ import { Component, computed, signal, effect, EffectRef, Signal } from '@angular
 import { FormsModule } from '@angular/forms';
 import { GoBackButtonComponent } from "../../../components/go-back-button/go-back-button.component";
 import { Product } from '../../../interfaces/product.interface';
+import { toObservable } from '@angular/core/rxjs-interop';
+import { debounceTime } from 'rxjs';
 
 @Component({
-  selector: 'app-signals-advanced',
+  selector: 'app-observable-advanced',
   imports: [FormsModule, CurrencyPipe, DatePipe, GoBackButtonComponent],
-  templateUrl: './signals-advanced.component.html',
-  styleUrl: './signals-advanced.component.css',
+  templateUrl: './observable-advanced.component.html',
+  styleUrl: './observable-advanced.component.css',
   standalone: true,
 })
-export class SignalsAdvancedComponent {
+export class ObservableAdvancedComponent {
   readonly filter = signal('');
+  readonly debouncedFilter = signal('');
   readonly outOfStock = signal(false);
   readonly products = signal([
     { name: 'Laptop', price: 999.99, createdAt: new Date(2024, 5, 1), quantity: 10 },
@@ -45,6 +48,15 @@ export class SignalsAdvancedComponent {
         alert('KO received!');
       }
     });
+
+    effect(() => {
+      console.log(`Filter Debounced is: ${this.debouncedFilter()}`);
+    });
+
+    // Using debounce along signals
+    toObservable(this.filter)
+      .pipe(debounceTime(300))
+      .subscribe(value => this.debouncedFilter.set(value));
   }
 
   updateFilter(event: Event) {
