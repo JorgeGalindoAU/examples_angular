@@ -25,7 +25,7 @@ export class SignalsComponent {
     setTimeout(() => {
       this.counter.update(v => ++v); // update is used to update current state
       this.isCalculating.set(false);
-    }, 1000);
+    }, 500);
   }
 
   decrement() {
@@ -34,6 +34,10 @@ export class SignalsComponent {
     setTimeout(() => {
       this.counter.update(v => --v);
       this.isCalculating.set(false);
-    }, 1000);
+    }, 500);
+  }
+
+  reset() {
+    this.counter.set(0);
   }
 }

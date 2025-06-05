@@ -1,7 +1,7 @@
 import { CommonModule, CurrencyPipe, DatePipe } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Product } from '../../../interfaces/product.interface';
+import { IProduct } from '../../../interfaces/product.interface';
 import { GoBackButtonComponent } from "../../../components/go-back-button/go-back-button.component";
 
 @Component({
@@ -12,7 +12,7 @@ import { GoBackButtonComponent } from "../../../components/go-back-button/go-bac
   standalone: true,
 })
 export class NgModelComponent {
-  product: Product = {
+  product: IProduct = {
     name: '',
     price: 0,
     createdAt: new Date(),

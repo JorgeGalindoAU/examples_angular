@@ -1,19 +1,26 @@
 <div class="px-5">
     <app-go-back-button></app-go-back-button>
+    <br>
 
-    @if(isCalculating()) {
-    <div class="spinner-border text-primary" role="status">
-        <span class="visually-hidden">Loading...</span>
+    <div class="d-flex justify-content-center align-items-center vh-50">
+        @if (isCalculating()) {
+
+        <div class="spinner-border text-primary" style="width: 4rem; height: 4rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+
+        } @else {
+        <div>
+            <h1>Valor: {{ counter() }}</h1>
+
+            @if (isFive()) {
+            <h2>¡El contador alcanzó 5!</h2>
+            }
+
+            <button class="btn btn-primary mx-2 px-3 py-2" (click)="increment()"> + </button>
+            <button class="btn btn-danger mx-2 px-3 py-2" (click)="decrement()"> - </button>
+            <button class="btn btn-warning mx-2 px-3 py-2" (click)="reset()"> Reset </button>
+        </div>
+        }
     </div>
-    } @else {
-    <div></div>
-    <h1>Valor: {{counter()}}</h1>
-
-    @if(isFive()) {
-    <h2>El contador alcanzó 5!!!</h2>
-    }
-
-    <button class="btn btn-primary" (click)="increment()">+</button>
-    <button class="btn btn-danger" (click)="decrement()">-</button>
-    }
 </div>

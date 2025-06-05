@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Product } from '../../../interfaces/product.interface';
+import { IProduct } from '../../../interfaces/product.interface';
 import { CurrencyPipe, DatePipe, TitleCasePipe } from '@angular/common';
 import { GoBackButtonComponent } from "../../../components/go-back-button/go-back-button.component";
 
@@ -12,8 +12,8 @@ import { GoBackButtonComponent } from "../../../components/go-back-button/go-bac
 })
 export class PipesComponent {
 
-  products: Product[] = [
-    { name: 'Laptop', price: 999.99, createdAt: new Date(2024, 5, 1), quantity: 10 },
+  products: IProduct[] = [
+    { name: 'Ordenador', price: 999.99, createdAt: new Date(2024, 5, 1), quantity: 10 },
     { name: 'Smartphone', price: 499.99, createdAt: new Date(2024, 4, 15), quantity: 25 },
     { name: 'Monitor', price: 199.99, createdAt: new Date(2024, 3, 10), quantity: 7 },
     { name: 'Teclado', price: 49.99, createdAt: new Date(2024, 2, 5), quantity: 50 }
