@@ -1,0 +1,3 @@
+<label for="myRange" class="form-label">{{ title() }}</label>
+<input type="range" class="form-range" min="0" max="5" id="myRange" [value]="valueRange()"
+    (input)="updateValue($event)">

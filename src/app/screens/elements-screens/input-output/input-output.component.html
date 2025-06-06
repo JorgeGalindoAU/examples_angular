@@ -27,4 +27,8 @@
     }
 
 </div>
+<div class="container mt-5">
+    <h2>Valor seleccionado: {{rangeSelected()}}</h2>
+    <app-range [title]="'Mi valor seleccionado'" (valueChanged)="onValueChanged($event)"></app-range>
+</div>
 }
