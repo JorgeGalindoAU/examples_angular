@@ -3,6 +3,7 @@ import { LocalProductsService } from '../../../services/local_products.service';
 import { IProduct } from '../../../interfaces/product.interface';
 import { CommonModule, CurrencyPipe, DatePipe, UpperCasePipe } from '@angular/common';
 import { GoBackButtonComponent } from '../../../components/go-back-button/go-back-button.component';
+import { ActionButtonComponent } from "../../../components/action-button/action-button.component";
 
 @Component({
   selector: 'app-ng-class',
@@ -17,6 +18,6 @@ export class NgClassComponent {
   readonly products = signal(this.productService.products);
 
   constructor() {
-  }
 
+  }
 }
