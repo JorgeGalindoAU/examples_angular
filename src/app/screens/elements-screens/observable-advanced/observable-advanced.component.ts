@@ -5,7 +5,7 @@ import { GoBackButtonComponent } from "../../../components/go-back-button/go-bac
 import { IProduct } from '../../../interfaces/product.interface';
 import { toObservable } from '@angular/core/rxjs-interop';
 import { debounceTime } from 'rxjs';
-import { LocalProductsService } from '../../../services/local_products.service';
+import { LocalProductsService } from '../../../services/products_local.service';
 
 @Component({
   selector: 'app-observable-advanced',

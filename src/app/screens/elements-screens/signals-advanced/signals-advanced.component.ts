@@ -3,7 +3,7 @@ import { Component, computed, signal, effect, EffectRef, Signal, inject } from '
 import { FormsModule } from '@angular/forms';
 import { GoBackButtonComponent } from "../../../components/go-back-button/go-back-button.component";
 import { IProduct } from '../../../interfaces/product.interface';
-import { LocalProductsService } from '../../../services/local_products.service';
+import { LocalProductsService } from '../../../services/products_local.service';
 
 @Component({
   selector: 'app-signals-advanced',

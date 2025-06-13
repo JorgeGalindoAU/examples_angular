@@ -1,5 +1,5 @@
 import { Component, computed, effect, inject, Signal, signal } from '@angular/core';
-import { LocalProductsService } from '../../../services/local_products.service';
+import { LocalProductsService } from '../../../services/products_local.service';
 import { IProduct } from '../../../interfaces/product.interface';
 import { CommonModule, CurrencyPipe, DatePipe, UpperCasePipe } from '@angular/common';
 import { GoBackButtonComponent } from '../../../components/go-back-button/go-back-button.component';
